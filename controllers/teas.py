@@ -12,6 +12,7 @@ def get_teas(db: Session = Depends(get_db)):
   teas = db.query(TeaModel).all()
   return teas
 
+
 @router.get('/teas/{tea_id}', response_model=TeaSchema)
 def get_single_tea(tea_id: int, db: Session = Depends(get_db)):
   tea = db.query(TeaModel).filter(TeaModel.id == tea_id).first()
@@ -28,7 +29,6 @@ def create_tea(tea: TeaSchema, db: Session = Depends(get_db)):
   db.refresh(new_tea)
   return new_tea
 
-# teas.py
 
 @router.put("/teas/{tea_id}", response_model=TeaSchema)
 def update_tea(tea_id: int, tea: TeaSchema, db: Session = Depends(get_db)):
