@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 from .base import BaseModel
 from passlib.context import CryptContext
 from datetime import datetime, timedelta, timezone
@@ -18,6 +19,7 @@ class UserModel(BaseModel):
     username = Column(String, unique=True)  # Each username must be unique
     email = Column(String, unique=True)  # Each email must be unique
     password_hash = Column(String, nullable=True)
+    teas = relationship("TeaModel", back_populates="user")
 
     def set_password(self, password: str):
         self.password_hash = pwd_context.hash(password)

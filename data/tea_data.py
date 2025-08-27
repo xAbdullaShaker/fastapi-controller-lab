@@ -15,8 +15,7 @@ teas_list = [
     TeaModel(name="jasmine", rating=3, in_stock=True)
 ]
 
-# List of comments related to teas
-# Each comment is associated with a tea using the tea_id
+
 comments_list = [
     CommentModel(content="This is a great tea", tea_id=1),
     CommentModel(content="Perfect for relaxing evenings", tea_id=2),

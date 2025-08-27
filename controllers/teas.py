@@ -1,10 +1,8 @@
-# controllers/teas.py
-
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from models.tea import TeaModel
 from serializers.tea import TeaSchema
-from models.user import UserModel  # Import the UserModel to verify the current user
+from models.user import UserModel 
 from typing import List
 from database import get_db
 from dependencies.get_current_user import get_current_user  # Import the get_current_user function
