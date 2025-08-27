@@ -9,6 +9,9 @@ uvicorn = "*"
 psycopg2-binary = "*"
 pydantic = "*"
 sqlalchemy = "*"
+passlib = "*"
+bcrypt = "*"
+pyjwt = "*"
 
 [dev-packages]
 
