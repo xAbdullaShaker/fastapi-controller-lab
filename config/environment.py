@@ -1,3 +1,4 @@
+import os
 
-db_URI = "postgresql://xabdulla:123@localhost:5432/teas_db"
-jwt_secret = "123"
+db_uri = os.getenv("DB_URI")
+jwt_secret = os.getenv("JWT_SECRET")

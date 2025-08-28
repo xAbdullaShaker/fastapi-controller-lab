@@ -12,6 +12,7 @@ sqlalchemy = "*"
 passlib = "*"
 bcrypt = "*"
 pyjwt = "*"
+python-dotenv = "*"
 
 [dev-packages]
 pytest = "*"
